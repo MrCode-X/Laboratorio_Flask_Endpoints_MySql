@@ -202,11 +202,11 @@ def producto_mas_caro():
         })
     return jsonify({"mensaje": "No hay productos"}), 404
 
-# 2. Endpoint: Productos con poco stock (menor a 5 unidades)
+# 2. Endpoint: Productos con poco stock (menor a 3 unidades)
 @app.route('/productos/poco-stock', methods=['GET'])
 def poco_stock():
     cursor = mysql.connection.cursor()
-    sql = "SELECT id, nombre, stock FROM producto WHERE stock < 5"
+    sql = "SELECT id, nombre, stock FROM producto WHERE stock < 3"
     cursor.execute(sql)
     datos = cursor.fetchall()
     cursor.close()
