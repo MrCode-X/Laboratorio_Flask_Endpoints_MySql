@@ -225,7 +225,7 @@ def poco_stock():
 @app.route('/categorias/cantidad-productos', methods=['GET'])
 def cantidad_por_categoria():
     cursor = mysql.connection.cursor()
-    # Realizamos un JOIN para traer el nombre de la categoría y contamos
+    
     sql = """
         SELECT c.nombre, COUNT(p.id) as total 
         FROM categoria c 
