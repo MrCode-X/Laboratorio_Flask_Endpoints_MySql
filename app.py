@@ -175,6 +175,14 @@ def productos_por_categoria(id): # obteniendo un cursor para ejecutar consultas 
 
 
 #_____________________________________________________________________
+# # Tarea: implementación de endpoints
+
+# Implementar endpoints para: producto mas caro, producto con poco stock, cantidad de productos por categoría
+
+
+# En un PDF con caratula capturas de pantalla del código de cada endpoint y el resultado en el navegador o en postman
+
+# Crear un repositorio para el proyecto en su github, subir el proyecto, luego en la caratula debajo del titulo colocar el enlace del repositorio
 #_____________________________________________________________________
 # 1. Endpoint: Producto más caro
 @app.route('/productos/mas-caro', methods=['GET'])
