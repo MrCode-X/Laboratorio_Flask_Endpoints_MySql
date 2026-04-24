@@ -188,7 +188,7 @@ def productos_por_categoria(id): # obteniendo un cursor para ejecutar consultas 
 @app.route('/productos/mas-caro', methods=['GET'])
 def producto_mas_caro():
     cursor = mysql.connection.cursor()
-    # Usamos ORDER BY y LIMIT 1 para obtener el de mayor precio
+    # Aplicando ORDER BY y LIMIT 1 para obtener el de mayor precio
     sql = "SELECT id, nombre, precio FROM producto ORDER BY precio DESC LIMIT 1"
     cursor.execute(sql)
     datos = cursor.fetchone()
